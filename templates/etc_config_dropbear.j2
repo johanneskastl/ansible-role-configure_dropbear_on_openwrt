@@ -14,6 +14,6 @@ config dropbear
 	option RootPasswordAuth 0
 {% endif %}
 {% if dropbear_interface is defined %}
-	option Interface {{ dropbear_interface }}
+	option Interface '{{ dropbear_interface }}'
 {% endif %}
 
