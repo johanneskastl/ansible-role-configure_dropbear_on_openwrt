@@ -1,0 +1,20 @@
+galaxy_info:
+  role_name: 'configure_dropbear_on_openwrt'
+  namespace: 'johanneskastl'
+  author: 'Johannes Kastl'
+  description: 'Configure the dropbear SSH server on OpenWRT'
+  company: 'B1 Systems GmbH'
+
+  license: 'BSD-3-Clause'
+
+  min_ansible_version: '2.12'
+
+  platforms:
+    - name: OpenWrt
+      versions:
+        - '21.02'
+        - '22.03'
+
+  galaxy_tags: []
+
+dependencies: []
