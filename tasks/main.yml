@@ -14,6 +14,6 @@
     dest: /etc/config/dropbear
     owner: root
     group: root
-    mode: '0644'
+    mode: '0600'
   notify:
     - 'Run uci commit to save changes'
