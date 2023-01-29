@@ -1,0 +1,12 @@
+---
+# configure_dropbear_on_openwrt/tasks/main.yml
+
+- name: 'Modify /etc/config/dropbear'
+  ansible.builtin.template:
+    src: etc_config_dropbear.j2
+    dest: /etc/config/dropbear
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - 'Run uci commit to save changes'
