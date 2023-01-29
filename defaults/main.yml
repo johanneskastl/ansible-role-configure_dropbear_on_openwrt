@@ -1,0 +1,11 @@
+---
+# configure_dropbear_on_openwrt/defaults/main.yml
+
+#
+# default values taken from the documentation
+# https://openwrt.org/docs/guide-user/base-system/dropbear
+
+dropbear_port: '22'
+dropbear_allow_password_authentication: true
+dropbear_allow_root_login: true
+dropbear_allow_root_login_with_password: true
