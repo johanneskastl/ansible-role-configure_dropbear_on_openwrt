@@ -1,0 +1,6 @@
+---
+# configure_dropbear_on_openwrt/handlers/main.yml
+
+- name: 'Run uci commit to save changes'
+  ansible.builtin.command:
+    cmd: 'uci commit /etc/config/dropbear'
