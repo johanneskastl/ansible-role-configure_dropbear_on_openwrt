@@ -1,6 +1,13 @@
 ---
 # configure_dropbear_on_openwrt/tasks/main.yml
 
+- name: Abort if ansible_user is root and dropbear_allow_root_login is set to true
+  ansible.builtin.fail:
+    msg: Disabling root logins while using root to connect is not a good idea, aborting...
+  when:
+    - ansible_user == 'root'
+    - not dropbear_allow_root_login | bool
+
 - name: 'Modify /etc/config/dropbear'
   ansible.builtin.template:
     src: etc_config_dropbear.j2
