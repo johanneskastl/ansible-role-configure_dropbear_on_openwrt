@@ -4,14 +4,14 @@ config dropbear
 {# default configuration file on 22.03 uses 'on', not '1' #}
 	option PasswordAuth 'on'
 {% else %}
-	option PasswordAuth 0
+	option PasswordAuth '0'
 {% endif %}
 	option Port '{{ dropbear_port }}'
 {% if not dropbear_allow_root_login | bool %}
-	option RootLogin 0
+	option RootLogin '0'
 {% endif %}
 {% if not dropbear_allow_root_login_with_password | bool %}
-	option RootPasswordAuth 0
+	option RootPasswordAuth '0'
 {% endif %}
 {% if dropbear_interface is defined %}
 	option Interface '{{ dropbear_interface }}'
